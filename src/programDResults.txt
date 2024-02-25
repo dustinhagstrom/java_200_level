@@ -1,0 +1,40 @@
+The results of the processor program were interesting. I knew that the average
+wait time for the processor that operated on a stack concept would be low under
+all conditions of load (light, medium, heavy). I had an intuition that 
+more packets would get served from the queue structure, after all, queues are
+very popular in the real world of customer service. The results are as follows:
+
+light load:
+    Queue:
+        served = 89;
+        abandoned = 0;
+        average wait time = 2.9;
+    Stack:
+        served = 89;
+        abandoned = 0;
+        average wait time = 2.9;
+
+Medium load:
+    Queue:
+        served = 155;
+        abandoned = 5;
+        average wait time = 10.2;
+    Stack:
+        served = 144;
+        abandoned = 16;
+        average wait time = 2.9;
+
+Heavy load:
+    Queue:
+        served = 167;
+        abandoned = 5;
+        average wait time = 11.7;
+    Stack:
+        served = 161;
+        abandoned = 11;
+        average wait time = 4.4;
+
+From these results, I have concluded that the queue data structure results
+in the best overall success and while keeping the average wait time relatively
+low. If the packets must be served quickly and losses are not an issue, then
+the stack is the best performer.
